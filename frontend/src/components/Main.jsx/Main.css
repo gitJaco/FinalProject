@@ -1,0 +1,19 @@
+.main {
+    width: 100%;
+    /* height: 500px; */
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    position: relative;
+    z-index: 5;
+}
+
+.spotify__logo {
+    position: fixed;
+    top: 250px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+}

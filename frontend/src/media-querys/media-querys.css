@@ -1,0 +1,39 @@
+@media screen and (max-width: 835px) {
+    .main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .album__image {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 754px) {
+    .popup__image {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .popup__image {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .spotify__background {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .spotify__background {
+        width: 300px;
+    }
+}

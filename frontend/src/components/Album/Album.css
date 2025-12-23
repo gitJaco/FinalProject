@@ -1,0 +1,28 @@
+.album__container {
+   background-color: #424242;
+   border-radius: 15px;
+   z-index: 1;
+   opacity: 0.5;
+}
+
+.album__image {
+    width: 250px;
+    border-radius: 15px;
+}
+
+.album__artist {
+    font-size: 21px;
+}
+
+.album__title {
+  color: #1ed760;
+}
+
+.album__button {
+    width: 100px;
+    border: none;
+    padding: 10px;
+    background-color: #616161;
+    border-radius: 15px;
+    color: #fff;
+}
