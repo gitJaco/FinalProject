@@ -5,6 +5,8 @@ import Main from './components/Main.jsx/Main';
 import Footer from './components/Footer/Footer';
 import { authorization, artistId, getAlbums } from './utils/auth';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import AboutMe from './components/AboutMe/AboutMe';
 
 
 
@@ -49,9 +51,16 @@ function App() {
   return (
     <>
     <Header></Header>
-    <Search search={search} setSearchInput={setSearchInput}></Search>
-    <Main albums={albums} handleOpenPopup={handleOpenPopup} handleClosePopup={handleClosePopup} popup={popup}></Main>
-    <Footer></Footer>
+    <Routes>
+    <Route path='/' element={
+      <>
+      <Search search={search} setSearchInput={setSearchInput}/>
+    <Main albums={albums} handleOpenPopup={handleOpenPopup} handleClosePopup={handleClosePopup} popup={popup}/>
+    <Footer/>
+       </>}  
+     />
+     <Route path='/about-me' element={<AboutMe/>}/>
+    </Routes>
     </>
   )
 }
