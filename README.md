@@ -10,3 +10,11 @@ albums de los artistas favoritos
 # Autor
 
 Jacobo De Hoyos Reyes
+
+# Link de despliegue
+
+https://final-project-omega-lac.vercel.app/
+
+# Link de github
+
+https://github.com/gitJaco/FinalProject
