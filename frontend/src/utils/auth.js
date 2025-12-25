@@ -44,3 +44,15 @@ export async function getAlbums(token, id) {
  const data = await response.json();
  return await data.items
 }
+
+export async function getTracks(token, id) {
+  const response = await fetch('https://api.spotify.com/v1/albums/' + id + '/tracks', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer ' + token
+  }
+})
+ const data = await response.json();
+ return await data.items;
+}

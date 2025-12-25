@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import  Search  from './components/Search/Search';
 import Main from './components/Main.jsx/Main';
 import Footer from './components/Footer/Footer';
-import { authorization, artistId, getAlbums } from './utils/auth';
+import { authorization, artistId, getAlbums, getTracks } from './utils/auth';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import AboutMe from './components/AboutMe/AboutMe';
@@ -17,6 +17,8 @@ function App() {
   const [accessToken, setAccessToken] = useState('');
   const [albums, setAlbums] = useState([]);
   const [popup, setPopup] = useState(null);
+  const [tracks, setTracks] = useState([]);
+  
 
   useEffect(() => {
       (async function() {
@@ -37,7 +39,14 @@ function App() {
     console.log(returnedAlbums);
     // Display those albums to the user
     setAlbums(returnedAlbums);
+    // Get tracks
+    // returnedAlbums.forEach(async(album) => {
+    //   const returnedTracks = await getTracks(accessToken, album.id)
+    //   setTracks(returnedTracks)
+    // })
   }
+
+  // console.log(tracks)
 
   // Popup
   // Abrir popup
@@ -48,6 +57,14 @@ function App() {
   function handleClosePopup() {
     setPopup(null);
   }
+  // Abrir tracks
+  function handleOpenTracks(songs) {
+    setTracks(songs)
+  }
+  // Cerrar tracks
+  function handleCloseTracks() {
+    setTracks(null)
+  }
   return (
     <>
     <Header></Header>
@@ -55,7 +72,7 @@ function App() {
     <Route path='/' element={
       <>
       <Search search={search} setSearchInput={setSearchInput}/>
-    <Main albums={albums} handleOpenPopup={handleOpenPopup} handleClosePopup={handleClosePopup} popup={popup}/>
+    <Main albums={albums} handleOpenPopup={handleOpenPopup} handleClosePopup={handleClosePopup} handleOpenTracks={handleOpenTracks} handleCloseTracks={handleCloseTracks} tracks={tracks} popup={popup} token={accessToken}/>
     <Footer/>
        </>}  
      />
