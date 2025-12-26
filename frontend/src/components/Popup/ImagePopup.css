@@ -13,11 +13,17 @@
 
 .popup__container {
   position: relative;
+  max-height: 90%
+  
 }
 
 .popup__closeButton {
   position: absolute;
   top: -35px;
   right: -35px;
+}
+
+.popup__image {
+  max-height: 500px;
 }
 
