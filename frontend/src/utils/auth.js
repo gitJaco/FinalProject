@@ -14,7 +14,7 @@ const response = await fetch('https://accounts.spotify.com/api/token', {
 
 const data = await response.json();
 
-console.log(data);
+
 
 return await data;
 }
