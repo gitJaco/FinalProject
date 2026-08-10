@@ -1,6 +1,6 @@
 function credentials() {
     return (
-        { clientId: 'f57b2400558344939bb69f4d5b0573a9', clientSecret: 'bfd15071b062456d8d62e37b2354f1bf'}
+        { clientId: '26692b936741424588550088b5890975', clientSecret: '15f17c427619414d9d5e55967d5fbf03'}
     )
 }
 
