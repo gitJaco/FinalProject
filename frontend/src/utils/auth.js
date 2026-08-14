@@ -34,7 +34,7 @@ export async function artistId(token, artist) {
 }
 
 export async function getAlbums(token, id) {
-  const response = await fetch('https://api.spotify.com/v1/artists/' + id + '/albums' + '?include_groups=album&market=MX&limit=50', {
+  const response = await fetch('https://api.spotify.com/v1/artists/' + id + '/albums' + '?include_groups=album&market=MX&limit=10', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',

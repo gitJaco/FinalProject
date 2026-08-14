@@ -34,6 +34,7 @@ function App() {
     // Get request using search to get the Artist ID
     const artistID = await artistId(accessToken, searchInput);
     console.log(artistID);
+    console.log(accessToken);
     // Get request with Artist ID grab all the albums from that artist
     const returnedAlbums = await getAlbums(accessToken, artistID);
     console.log(returnedAlbums);
